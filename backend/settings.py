@@ -159,10 +159,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 if DEBUG:
     STATIC_ROOT = os.path.join(BASE_DIR, "static")
-elif os.getenv('LOCAL_DATABASE_URL') is None and os.getenv('PRODT_DATABASE_URL') is None:
-    STATIC_ROOT = os.path.join(BASE_DIR , "staticfiles_build", "static")
 else:
-    STATIC_ROOT = os.path.join(BASE_DIR , "staticfiles", "static")
+    STATIC_ROOT = os.path.join(BASE_DIR , "static")
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR / 'backend/static/'),
