@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+{% load tailwind_tags %}
+{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Hazon Power - {% block title %}{% endblock title %}</title>
+        <meta name="description" content="{% block meta_description %}{% endblock meta_description %}">
+        <link rel="icon" href="{% static "backend/favicon/favicon.ico" %}">
+        <link rel="apple-touch-icon" sizes="57x57" href="{% static "backend/favicon/apple-icon-57x57.png"%}">
+        <link rel="apple-touch-icon" sizes="60x60" href="{% static "backend/favicon/apple-icon-60x60.png"%}">
+        <link rel="apple-touch-icon" sizes="72x72" href="{% static "backend/favicon/apple-icon-72x72.png"%}">
+        <link rel="apple-touch-icon" sizes="76x76" href="{% static "backend/favicon/apple-icon-76x76.png"%}">
+        <link rel="apple-touch-icon" sizes="114x114" href="{% static "backend/favicon/apple-icon-114x114.png"%}">
+        <link rel="apple-touch-icon" sizes="120x120" href="{% static "backend/favicon/apple-icon-120x120.png"%}">
+        <link rel="apple-touch-icon" sizes="144x144" href="{% static "backend/favicon/apple-icon-144x144.png"%}">
+        <link rel="apple-touch-icon" sizes="152x152" href="{% static "backend/favicon/apple-icon-152x152.png"%}">
+        <link rel="apple-touch-icon" sizes="180x180" href="{% static "backend/favicon/apple-icon-180x180.png"%}">
+        <link rel="icon" type="image/png" sizes="192x192"  href="{% static "backend/favicon/android-icon-192x192.png"%}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{% static "backend/favicon/favicon-32x32.png"%}">
+        <link rel="icon" type="image/png" sizes="96x96" href="{% static "backend/favicon/favicon-96x96.png"%}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{% static "backend/favicon/favicon-16x16.png"%}">
+        <link rel="manifest" href="{% static 'backend/favicon/manifest.json' %}">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+
+        <!-- CSS here -->
+        <link rel="stylesheet" href="{% static "core/assets/css/bootstrap.css" %}">
+        <link rel="stylesheet" href="{% static "core/assets/css/swiper-bundle.css" %}">
+        <link rel="stylesheet" href="{% static "core/assets/css/magnific-popup.css" %}">
+        <link rel="stylesheet" href="{% static "core/assets/css/font-awesome-pro.css" %}">
+        <link rel="stylesheet" href="{% static "core/assets/css/spacing.css" %}">
+        <link rel="stylesheet" href="{% static "core/assets/css/animate.css" %}">
+        <link rel="stylesheet" href="{% static "core/assets/css/main.css" %}">
+        {% comment %} <link rel="stylesheet" href="{% static 'core/assets/css/tailwind-main.css' %}"> {% endcomment %}
+        {% block extra_css %}{% endblock extra_css %}
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        {% include "core/partials/preloader.html" %}
+        
+        {% include "core/partials/utility.html" %}
+
+        {% include "core/partials/header.html" %}
+        
+        <main>
+            {% block main-content %}{% endblock main-content %}
+        </main>
+
+        {% include "core/partials/footer.html" %}
+
+        <!-- JS here -->
+        <script src="{% static "core/assets/js/vendor/jquery.js" %}"></script>
+        <script src="{% static "core/assets/js/bootstrap-bundle.js" %}"></script>
+        <script src="{% static "core/assets/js/wow.js" %} "></script>
+        <script src="{% static "core/assets/js/swiper-bundle.js" %}"></script>
+        <script src="{% static "core/assets/js/magnific-popup.js" %}"></script>
+        <script src="{% static "core/assets/js/purecounter.js" %}"></script>
+        <script src="{% static "core/assets/js/imagesloaded-pkgd.js" %}"></script>
+        <script src="{% static "core/assets/js/isotope-pkgd.js" %}"></script>
+        <script src="{% static "core/assets/js/ajax-form.js" %}"></script>
+        <script src="{% static "core/assets/js/main.js" %}"></script>
+        {% block extra_js %}{% endblock extra_js %}
+    </body>
+</html>
