@@ -1,3 +1,4 @@
-if not DEBUG:
+from django.conf import settings
+if not settings.DEBUG:
     import pymysql
     pymysql.install_as_MySQLdb()
