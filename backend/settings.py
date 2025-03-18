@@ -69,6 +69,7 @@ NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd"
 MIDDLEWARE = [
     'django_hosts.middleware.HostsRequestMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -118,7 +119,7 @@ if DEBUG:
 else:
     DATABASES = {
         "default": 
-            dj_database_url.parse(os.environ.get("PRODT_DATABASE_URL"), conn_max_age=600, engine='django.db.backends.mysql' ),
+            dj_database_url.parse(os.environ.get("DATABASE_URL"), conn_max_age=600, engine='django.db.backends.mysql' ),
     }
 
 
@@ -157,16 +158,18 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
 if DEBUG:
-    STATIC_ROOT = os.path.join(BASE_DIR, "static")
+    STATIC_ROOT = os.path.join(BASE_DIR / 'static')
 else:
-    STATIC_ROOT = os.path.join(BASE_DIR , "static")
+    STATIC_ROOT = '/home/hazowmmo/public_html/static'
+
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR / 'backend/static/'),
 ]
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 
 # Whitenoise specific settings
 WHITENOISE_USE_FINDERS = True
