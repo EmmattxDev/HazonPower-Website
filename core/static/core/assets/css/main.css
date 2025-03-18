@@ -1813,7 +1813,7 @@ div.demo img {
 .tp-header-2-social {
   padding-left: 22px;
   margin-left: 22px;
-  border-left: 1px solid var(--tp-theme-primary);
+  border-left: 1px solid var(--tp-theme-secondary);
 }
 .tp-header-2-social a {
   font-size: 16px;
@@ -2001,7 +2001,7 @@ div.demo img {
   -webkit-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
-  color: var(--tp-common-white);
+  color: var(--tp-common-black);
   font-family: var(--tp-ff-fontawesome);
 }
 .tp-main-menu ul li.has-dropdown.p-static {
@@ -3505,7 +3505,7 @@ div.demo img {
 }
 @media only screen and (min-width: 1400px) and (max-width: 1599px), only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
   .tp-hero-hight {
-    height: 800px;
+    height: 120%;
   }
 }
 .tp-hero-heading {
@@ -3674,8 +3674,8 @@ div.demo img {
 }
 
 .tp-hero-2-ptb {
-  padding-top: 235px;
-  padding-bottom: 230px;
+  padding-top: 200px;
+  padding-bottom: 120px;
   background-size: cover;
   background-repeat: no-repeat;
 }
