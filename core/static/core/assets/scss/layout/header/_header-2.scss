@@ -29,26 +29,26 @@
             }
         }         
         &-social {
-        padding-left: 22px;
-        margin-left: 22px;
-        border-left: 1px solid var(--tp-theme-secondary);
-        & a {
-            font-size: 16px;
-            color: rgba($color: #ffff, $alpha: 0.35);
-            &:not(:last-child) {
-                margin-right: 12px;
-            }
-            &:hover {
-                color: var(--tp-common-white);
-                & svg {
-                    fill: var(--tp-common-white);
+            padding-left: 22px;
+            margin-left: 22px;
+            border-left: 1px solid var(--tp-theme-secondary);
+            & a {
+                font-size: 16px;
+                color: rgba($color: #ffff, $alpha: 0.35);
+                &:not(:last-child) {
+                    margin-right: 12px;
                 }
-            }
-            & svg {
-                width: 16px;
-                fill: currentColor;
-                transform: translateY(-2px);
-                @include transition();
+                &:hover {
+                    color: var(--tp-common-white);
+                    & svg {
+                        fill: var(--tp-common-white);
+                    }
+                }
+                & svg {
+                    width: 16px;
+                    fill: currentColor;
+                    transform: translateY(-2px);
+                    @include transition();
                 }
             }
         }

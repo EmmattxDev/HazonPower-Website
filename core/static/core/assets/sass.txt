@@ -1,2 +1,4 @@
 
 sass --watch './core/static/core/assets/scss/main.scss':'./core/static/core/assets/css/main.css'
+
+sass --no-source-map --watch './core/static/core/assets/scss/main.scss':'./core/static/core/assets/css/main.css'

@@ -1,0 +1,26 @@
+{
+  "name": "hazon",
+  "version": "1.0.0",
+  "description": "A website for a solar energy service company built using HTMX, Python (Django), Tailwind CSS, JavaScript, Cloudinary, MySQL.\r # HazonPower-website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "sass --watch ./core/static/core/assets/scss/main.scss:./core/static/core/assets/css/main.css --no-source-map",
+    "build": "sass --style=compressed ./core/static/core/assets/scss/main.scss:./core/static/core/assets/css/main.css --no-source-map"
+   
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EmmattxDev/HazonPower-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EmmattxDev/HazonPower-website/issues"
+  },
+  "homepage": "https://github.com/EmmattxDev/HazonPower-website#readme",
+  "devDependencies": {
+    "sass": "^1.86.0"
+  }
+}

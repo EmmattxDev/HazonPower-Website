@@ -9,7 +9,7 @@ urlpatterns = [
     path('', admin.site.urls),
     # path("ckeditor5/", include('django_ckeditor_5.urls')),
     # path('', include('pwa.urls')),
-    # path("__reload__/", include("django_browser_reload.urls")),
+    path("__reload__/", include("django_browser_reload.urls")),
 ]
 
 if settings.DEBUG:
