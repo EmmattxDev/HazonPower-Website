@@ -47,8 +47,14 @@
                         <div class="tp-main-menu d-none d-xl-block">
                             <nav class="tp-mobile-menu-active">
                                 <ul>
+                                    {% comment %} <li>
+                                        <a href="{% host_url "home" host 'www' %}">Home</a>
+                                    </li> {% endcomment %}
+                                    <li>
+                                        <a href="{% url "about" %}">About Us</a>
+                                    </li>
                                     <li class="has-dropdown p-static">
-                                        <a class="hover" href="#">Home</a>
+                                        <a class="hover" href="#">Services</a>
                                         <div class="tp-mega-menu">
                                             <div class="tp-home-menu">
                                                 <div class="row row-cols-1 row-cols-xl-4 row-cols-xxl-4">
@@ -67,11 +73,8 @@
                                             </div>
                                         </div>
                                     </li>
-                                    <li>
-                                        <a href="{% url "about" %}">About Us</a>
-                                    </li>
                                     <li class="has-dropdown">
-                                        <a href="#">Service</a>
+                                        <a href="#">Projects</a>
                                         <ul class="sub-menu">
                                             <li>
                                                 <a href="#">Service</a>
@@ -108,6 +111,7 @@
                                             <li><a href="#">Blog Details</a></li>
                                         </ul>
                                     </li>
+                                    <li><a href="#">Shop</a></li>
                                     <li><a href="#">Contact</a></li>
                                 </ul>
                             </nav>
@@ -170,8 +174,14 @@
                         <div class="tp-main-menu d-none d-xl-block">
                             <nav class="">
                                 <ul>
+                                    {% comment %} <li>
+                                        <a href="{% host_url "home" host 'www' %}">Home</a>
+                                    </li> {% endcomment %}
+                                    <li>
+                                        <a href="{% url "about" %}">About Us</a>
+                                    </li>
                                     <li class="has-dropdown p-static">
-                                        <a class="hover" href="#">Home</a>
+                                        <a class="hover" href="#">Services</a>
                                         <div class="tp-mega-menu">
                                             <div class="tp-home-menu">
                                                 <div class="row row-cols-1 row-cols-xl-4 row-cols-xxl-4">
@@ -179,26 +189,26 @@
                                                         <div class="tp-home-content">
                                                             <a href="#">
                                                                 <div class="tp-home-thumb">
-                                                                <img src="" alt="">
+                                                                    <img src="" alt="">
                                                                 </div>
                                                                 <h3 class="tp-home-title">Home 01</h3>
                                                             </a>
                                                         </div>
                                                     </div>
+                                                    
                                                 </div>
                                             </div>
                                         </div>
                                     </li>
-                                    <li>
-                                        <a href="{% url "about" %}">About Us</a>
-                                    </li>
                                     <li class="has-dropdown">
-                                        <a href="#">Service</a>
+                                        <a href="#">Projects</a>
                                         <ul class="sub-menu">
-                                            <li><a href="#">Service</a>
+                                            <li>
+                                                <a href="#">Service</a>
                                                 <ul class="sub-menu">
                                                     <li><a href="#">Service</a></li>
-                                                    <li><a href="#">Service Details</a>
+                                                    <li>
+                                                        <a href="#">Service Details</a>
                                                         <ul class="sub-menu">
                                                             <li><a href="#">Service</a></li>
                                                             <li><a href="#">Service Details</a></li>
@@ -211,24 +221,25 @@
                                     </li>
                                     <li class="has-dropdown"><a href="#">Pages</a>
                                         <ul class="sub-menu">
-                                            <li><a href="portfolio.html">Portfolio</a></li>
-                                            <li><a href="portfolio-details.html">Portfolio Details</a></li>
-                                            <li><a href="pricing.html">Pricing</a></li>
-                                            <li><a href="faq.html">Faq</a></li>
-                                            <li><a href="team.html">Team</a></li>
-                                            <li><a href="team-details.html">Team Details</a></li>
-                                            <li><a href="error.html">Error</a></li>
+                                            <li><a href="#">Portfolio</a></li>
+                                            <li><a href="#">Portfolio Details</a></li>
+                                            <li><a href="#">Pricing</a></li>
+                                            <li><a href="#">Faq</a></li>
+                                            <li><a href="#">Team</a></li>
+                                            <li><a href="#">Team Details</a></li>
+                                            <li><a href="#">Error</a></li>
                                         </ul>
                                     </li>
                                     <li class="has-dropdown">
-                                        <a href="blog.html">Blog</a>
+                                        <a href="#">Blog</a>
                                         <ul class="sub-menu">
-                                            <li><a href="blog.html">Blog</a></li>
-                                            <li><a href="blog-sidebar.html">Blog Sidebar</a></li>
-                                            <li><a href="blog-details.html">Blog Details</a></li>
+                                            <li><a href="#">Blog</a></li>
+                                            <li><a href="#">Blog Sidebar</a></li>
+                                            <li><a href="#">Blog Details</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="#">Shop</a></li>
+                                    <li><a href="#">Contact</a></li>
                                 </ul>
                             </nav>
                         </div>
