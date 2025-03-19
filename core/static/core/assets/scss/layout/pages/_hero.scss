@@ -32,7 +32,7 @@
       background: rgba(20, 24, 32, 0.55);
     }
     @media #{$xxl,$xl,$lg,$md,$xs} {
-      height: 120%;
+      height: 800px;
     }
   }
   &-heading{
@@ -186,8 +186,8 @@
 
 .#{$theme-prefix}-hero-2{
   &-ptb{
-    padding-top: 200px;
-    padding-bottom: 120px;
+    padding-top: 180px;
+    padding-bottom: 180px;
     background-size: cover;
     background-repeat: no-repeat;
     @media #{$md} {
@@ -198,6 +198,29 @@
       padding-top: 100px;
       padding-bottom: 100px;
     }
+  }
+  &-hight{
+    height: 940px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    &::before{
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 0;
+      background: rgba(20, 24, 32, 0.55);
+    }
+    @media #{$xxl,$xl,$lg,$md,$xs} {
+      height: 680px;
+    }
+    @media #{$md, $xs} {
+      height: 750px;
+    }
+    
+   
   }
   &-heading{
     @media #{$xs} {
@@ -217,6 +240,7 @@
     }
   }
   &-btn-box{
+    flex-wrap: wrap;
     & .tp-hero-btn-video{
       & span{
         color: var(--tp-common-white);

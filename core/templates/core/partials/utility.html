@@ -1,4 +1,5 @@
 {% load static %}
+{% load hosts %}
 
 <!-- back to top start -->
 <div class="back-to-top-wrapper">
@@ -26,7 +27,7 @@
         <div class="offcanvas__content">
             <div class="offcanvas__top mb-40">
                 <div class="offcanvas__logo">
-                    <a href="index.html">
+                    <a href="{% host_url 'home' host 'www' %}">
                         <img data-width="80" src="{% static "core/assets/image/hazon-official-logo.png" %}" alt="logo">
                     </a>
                 </div>
