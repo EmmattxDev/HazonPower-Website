@@ -341,9 +341,9 @@ textarea {
 }
 
 input[type=color] {
-  appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;
+  appearance: none;
   background: none;
   border: 0;
   cursor: pointer;
