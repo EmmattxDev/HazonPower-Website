@@ -1,5 +1,5 @@
 {% load static %}
-
+{% load hosts %}
 <!-- hero area start -->
 <section class="tp-hero-2-ptb tp-hero-2-hight fix p-relative" data-background="{% static "core/assets/image/sungrow-emea-ceTSHQ0qars-unsplash.webp" %}">
    <div class="container">
@@ -11,7 +11,7 @@
                </div>
                <div class="tp-hero-2-btn-box d-flex align-items-center wow fadeInUp" data-wow-duration=".5s" data-wow-delay=".7s">
                   <div class="tp-hero-btn">
-                     <a class="tp-btn btn-2 btn-text-flip" href="about.html"><span data-text="Discover More">Discover More</span></a>
+                     <a class="tp-btn btn-2 btn-text-flip" href="{% host_url "core:about:about" host 'www' %}"><span data-text="Discover More">Discover More</span></a>
                   </div>
                   <a class="tp-hero-btn-video popup-video d-flex align-items-center" href="https://www.youtube.com/watch?v=go7QYaQR494"><span><svg width="11" height="14" viewBox="0 0 11 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                      <path d="M11 7L0.5 13.0622V0.937822L11 7Z" fill="currentColor"></path>

@@ -1,6 +1,9 @@
 # about/views.py
 from django.views.generic import TemplateView, ListView
-# from .models import CompanyInfo, TeamMember, Department
+from .models import CompanyInfo, TeamMember, Department
+
+
+app_name = 'about'
 
 class AboutPageView(TemplateView):
     template_name = 'about/about.html'

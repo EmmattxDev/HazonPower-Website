@@ -1,4 +1,5 @@
 {% load static %}
+{% load hosts %}
 <!-- about arae start -->
 <section class="tp-about-2-ptb pt-130 pb-130">
     <div class="container">
@@ -32,7 +33,7 @@
                         </ul>
                     </div>
                     <div class="tp-hero-btn">
-                        <a class="tp-btn btn-text-flip" href="{% host_url "about" host 'www' %}"><span data-text="Know About More">Know About More</span></a>
+                        <a class="tp-btn btn-text-flip" href="{% host_url "core:about:about" host 'www' %}"><span data-text="Know About More">Know About More</span></a>
                     </div>
                 </div>
             </div>

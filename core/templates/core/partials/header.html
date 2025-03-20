@@ -38,7 +38,7 @@
         <div class="container container-1320">
             <div class="d-flex justify-content-between align-items-center">
                 <div class="tp-header-logo">
-                    <a href="{% host_url 'home' host 'www' %}">
+                    <a href="{% host_url 'core:home' host 'www' %}">
                         <img data-width="80" src="{% static "core/assets/image/hazon-official-logo.png" %}" alt="Hazon Power Company Official Logo">
                     </a>
                 </div>
@@ -51,7 +51,7 @@
                                         <a href="{% host_url "home" host 'www' %}">Home</a>
                                     </li> {% endcomment %}
                                     <li>
-                                        <a href="{% host_url "about" host 'www' %}">About Us</a>
+                                        <a href="{% host_url "core:about:about" host 'www' %}">About Us</a>
                                     </li>
                                     <li class="has-dropdown p-static">
                                         <a class="hover" href="#">Services</a>
@@ -164,7 +164,7 @@
         <div class="container container-1320">
             <div class="d-flex justify-content-between align-items-center">
                 <div class="tp-header-logo">
-                    <a href="{% host_url 'home' host 'www' %}">
+                    <a href="{% host_url 'core:home' host 'www' %}">
                         <img data-width="80" src="{% static "core/assets/image/hazon-official-logo.png" %}" alt="Hazon Power Company Official Logo">
                     </a>
                 </div>
@@ -178,7 +178,7 @@
                                         <a href="{% host_url "home" host 'www' %}">Home</a>
                                     </li> {% endcomment %}
                                     <li>
-                                        <a href="{% host_url "about" host 'www' %}">About Us</a>
+                                        <a href="{% host_url "core:about:about" host 'www' %}">About Us</a>
                                     </li>
                                     <li class="has-dropdown p-static">
                                         <a class="hover" href="#">Services</a>

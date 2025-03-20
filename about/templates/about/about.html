@@ -1,6 +1,7 @@
 {% extends "core/base.html" %}
 {% load static %}
 {% load hosts %}
+
 {% block title %}Company About Page{% endblock title %}
 
 {% block main-content %}
@@ -12,7 +13,7 @@
                 <div class="tp-breadcrumb__content">
                     <h3 class="tp-breadcrumb__title">About us</h3>
                     <div class="tp-breadcrumb__list">
-                    <span><a href="{% host_url "home" host 'www' %}">Home</a></span>
+                    <span><a href="{% host_url "core:home" host 'www' %}">Home</a></span>
                     <span class="dvdr"></span>
                     <span>About us</span>
                     </div>
