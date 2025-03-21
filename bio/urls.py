@@ -2,12 +2,12 @@
 from django.urls import include, path
 from django.conf import settings
 from django.conf.urls.static import static
-from .views import aboutUs
+from . import views
 
-app_name = 'about'
+app_name = 'bio'
 
 urlpatterns = [
-    path('', aboutUs, name='about'),
+    path('', views.aboutUs, name='bio'),
     # path('team/', TeamPageView.as_view(), name='team'),
 ]
 

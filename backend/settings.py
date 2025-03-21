@@ -52,7 +52,7 @@ INSTALLED_APPS = [
 
     #project apps
     'core',
-    'about',
+    'bio',
 ]
 
 #tailwind css config
