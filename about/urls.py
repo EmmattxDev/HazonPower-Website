@@ -2,13 +2,13 @@
 from django.urls import include, path
 from django.conf import settings
 from django.conf.urls.static import static
-from .views import AboutPageView, TeamPageView
+from .views import aboutUs
 
 app_name = 'about'
 
 urlpatterns = [
-    path('', AboutPageView.as_view(), name='about'),
-    path('team/', TeamPageView.as_view(), name='team'),
+    path('', aboutUs, name='about'),
+    # path('team/', TeamPageView.as_view(), name='team'),
     path("__reload__/", include("django_browser_reload.urls")),
 ]
 
