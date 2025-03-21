@@ -8,6 +8,7 @@ app_name = 'core'
 urlpatterns = [
     path("", views.HomeView.as_view(), name="home"),
     path('about/', include("about.urls")),
+    path("__reload__/", include("django_browser_reload.urls")),
 ]
 
 

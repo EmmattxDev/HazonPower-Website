@@ -1,5 +1,5 @@
 # about/urls.py
-from django.urls import path
+from django.urls import include, path
 from django.conf import settings
 from django.conf.urls.static import static
 from .views import AboutPageView, TeamPageView
@@ -9,6 +9,7 @@ app_name = 'about'
 urlpatterns = [
     path('', AboutPageView.as_view(), name='about'),
     path('team/', TeamPageView.as_view(), name='team'),
+    path("__reload__/", include("django_browser_reload.urls")),
 ]
 
 if settings.DEBUG:
