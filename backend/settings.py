@@ -189,7 +189,7 @@ LOGGING = {
         'file': {
             'level': 'ERROR',
             'class': 'logging.FileHandler',
-            'filename': 'logs/debug.log',
+            'filename': '/home/hazowmmo/logs/django.log',
             'formatter': 'simple',
         },
     },
