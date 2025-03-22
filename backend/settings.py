@@ -129,7 +129,7 @@ else:
 
     # Add MySQL-specific options
     DATABASES['default']['OPTIONS'] = {
-        'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
+        'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
         'ssl_mode': 'REQUIRED',
     }
 
