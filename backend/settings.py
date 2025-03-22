@@ -120,7 +120,16 @@ if DEBUG:
 else:
     DATABASES = {
         "default": 
-            dj_database_url.parse(os.environ.get("DATABASE_URL"), conn_max_age=600, engine='django.db.backends.mysql' ),
+            dj_database_url.parse(
+                os.environ.get("DATABASE_URL"), 
+                conn_max_age=600, 
+                engine='django.db.backends.mysql',
+                # Add these options for Namecheap MySQL
+                options={
+                    'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+                    'ssl_mode': 'REQUIRED',
+                } 
+            ),
     }
 
 
@@ -196,5 +205,32 @@ if not DEBUG:
     SECURE_HSTS_PRELOAD = True
     SECURE_REFERRER_POLICY = 'same-origin'
 
-    
 
+# settings.py
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'simple': {
+            'format': '{levelname} {message}',
+            'style': '{',
+        },
+    },
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+            'formatter': 'simple'
+        },
+    },
+    'root': {
+        'handlers': ['console'],
+        'level': 'WARNING',
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console'],
+            'level': os.getenv('DJANGO_LOG_LEVEL', 'INFO'),
+            'propagate': False,
+        },
+    },
+}
