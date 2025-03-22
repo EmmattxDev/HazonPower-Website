@@ -123,13 +123,14 @@ else:
             dj_database_url.parse(
                 os.environ.get("DATABASE_URL"), 
                 conn_max_age=600, 
-                engine='django.db.backends.mysql',
-                # Add these options for Namecheap MySQL
-                options={
-                    'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
-                    'ssl_mode': 'REQUIRED',
-                } 
+                engine='django.db.backends.mysql', 
             ),
+    }
+
+    # Add MySQL-specific options
+    DATABASES['default']['OPTIONS'] = {
+        'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
+        'ssl_mode': 'REQUIRED',
     }
 
 
